@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Guess the Player</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="container">
+        <h1>Guess the Player</h1>
+        <img id="playerImage" 
+        class="silhouette" 
+        src="Images copy/obj silhouette.png" 
+        alt="Guess the Image" 
+        width="300">
+        <input type="text" id="guessInput" placeholder="Enter your guess">
+        <button id="submitGuess">Guess</button>
+        <button id="restartButton" style="display: none;">Restart</button> <!-- Hide restart button initially -->
+        <p id="feedback"></p>
+        <p id="score">Score: 0</p> 
+        <p id="timer"></p>
+    </div>
+    
+    <script src="app.js" async defer></script>
+</body>
+</html>

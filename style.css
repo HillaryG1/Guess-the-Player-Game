@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 5px; /* Add margin to buttons */
+}
+
+#feedback {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.silhouette {
+    /* filter: brightness(0); */
+}
+
+/* Style for restart button */
+#restartButton {
+    order: 2; /* Specify order of restart button */
+    display: none; /* Hide restart button initially */
+    margin-left: 5px; 
+}

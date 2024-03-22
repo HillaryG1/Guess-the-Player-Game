@@ -66,10 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
             feedback.textContent = `${currentPlayer.name} is correct!`;
             playerImage.src = currentPlayer.realImage;
             currentPlayerIndex++;
-            score += 10;
+            score += 25;
             scoreDisplay.textContent = `Score: ${score}`;
             if (currentPlayerIndex < players.length) {
-                setTimeout(updateUIWithSilhouette, 2300); ///// speed of the images transtioning 
+                setTimeout(updateUIWithSilhouette, 2200); ///// speed of the images transtioning 
             } else {
                 feedback.textContent = 'You\'ve guessed all players!';
                 restartButton.style.display = 'block'; // Show the restart button at the end of the game

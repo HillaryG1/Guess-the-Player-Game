@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const submitButton = document.getElementById('submitGuess');
+    const guessForm = document.getElementById('guessForm'); // Select the form
     const guessInput = document.getElementById('guessInput');
     const feedback = document.getElementById('feedback');
     const playerImage = document.getElementById('playerImage');
@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
         restartButton.style.display = 'none'; // Hide the restart button
     }
   
-    function guess() {
+    function guess(event) {
+        event.preventDefault(); // Prevent form submission
         const userGuess = guessInput.value.trim().toLowerCase();
         if (userGuess === '') {
             alert('Please enter your guess.');
@@ -83,13 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
   
-    submitButton.addEventListener('click', guess);
-    guessInput.addEventListener('keyup', function(event) {
-        if (event.key === 'Enter') {
-            guess();
-        }
-    });
+    guessForm.addEventListener('submit', guess); // Listen for form submission
   
     restartButton.addEventListener('click', restartGame);
-  });
-  
+});

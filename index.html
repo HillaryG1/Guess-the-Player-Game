@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
 </head>
 <body>
    
@@ -17,12 +18,16 @@
         src="Images copy/obj silhouette.png" 
         alt="Guess the Image" 
         width="300">
-        <input type="text" id="guessInput" placeholder="Enter your guess">
-        <button id="submitGuess">Guess</button>
-        <button id="restartButton" style="display: none;">Restart</button> <!-- Hide restart button initially -->
+
+        <form id="guessForm"> <!-- Use a form -->
+            <input type="text" id="guessInput" name="guessInput" placeholder="Enter your guess">
+            <button type="submit" id="submitGuess">Guess</button> <!-- Use type="submit" -->
+            <button id="restartButton" style="display: none;"><i class="fas fa-redo"></i></button> <!-- Restart button with icon -->
         <p id="feedback"></p>
         <p id="score">Score: 0</p> 
         <p id="timer"></p>
+        </form>
+        
     </div>
     
     <script src="app.js" async defer></script>
